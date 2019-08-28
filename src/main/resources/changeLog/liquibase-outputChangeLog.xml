@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog dbchangelog-3.6.xsd">
+
+    <property name="boolean" value="TINYINT(1)" dbms="mysql"/>
+    <property name="boolean" value="TINYINT(1)" dbms="mssql"/>
+    <property name="boolean" value="TINYINT(1)" dbms="h2"/>
+
+    <property name="falseValue" value="0" dbms="mysql"/>
+    <property name="falseValue" value="0" dbms="mssql"/>
+    <property name="falseValue" value="0" dbms="h2"/>
+
+    <property name="trueValue" value="1" dbms="mysql"/>
+    <property name="trueValue" value="1" dbms="mssql"/>
+    <property name="trueValue" value="1" dbms="h2"/>
+
+    <property name="longblob" value="LONGBLOB" dbms="mysql"/>
+    <property name="longblob" value="LONGVARBINARY" dbms="mssql"/>
+    <property name="longblob" value="LONGVARBINARY" dbms="h2"/>
+
+    <property name="varchar" value="NVARCHAR" dbms="mssql"/>
+    <property name="varchar" value="VARCHAR" dbms="mysql"/>
+    <property name="varchar" value="VARCHAR" dbms="h2"/>
+
+    <property name="audit_schema" value="dbo"/>
+    <property name="audit_catalog" value="moneytor_audit"/>
+
+    <include file="v1_1_liquibase-tableChangeLog.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog dbchangelog-3.6.xsd">
+    <changeSet author="mike (generated)" id="1538571374785-1" runOnChange="true">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="user_log"/>
+            </not>
+        </preConditions>
+        <createTable tableName="user_log">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user_id" type="${varchar}(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="action_type" type="${varchar}(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_at" type="${varchar}(255)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
