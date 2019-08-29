@@ -24,6 +24,7 @@ public class UserLog {
 
 	@Column(name = "created_at", nullable = false)
 	@CreatedDate
+	@Convert(converter = DefaultLocalDateTimeConverter.class)
 	private LocalDateTime createdAt =  LocalDateTime.now();
 
 	public long getId() {

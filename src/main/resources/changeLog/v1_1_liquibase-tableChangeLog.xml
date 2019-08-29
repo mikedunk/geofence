@@ -18,7 +18,7 @@
             <column name="action_type" type="${varchar}(255)">
                 <constraints nullable="false"/>
             </column>
-            <column name="created_at" type="${varchar}(255)"/>
+            <column name="created_at" type="datetime"/>
         </createTable>
     </changeSet>
 </databaseChangeLog>
