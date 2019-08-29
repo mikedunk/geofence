@@ -26,5 +26,4 @@ gradle/
 .idea
 target/
 *.DS_Store
-.mvn
 
